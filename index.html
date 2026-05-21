@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -106,7 +106,6 @@
     
     <style>
         html { 
-            scroll-behavior: smooth; 
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
         }
@@ -140,11 +139,11 @@
             pointer-events: auto;
         }
 
-        /* Scroll-linked reveal animations (triggers entering AND exiting viewports) */
+        /* Scroll-linked reveal animations for elegant entry and exit */
         .reveal {
             opacity: 0;
-            transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 850ms cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 850ms cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform, opacity;
         }
         
@@ -161,10 +160,10 @@
         }
 
         .reveal-scale {
-            transform: scale(0.92) translate3d(0, 20px, 0);
+            transform: scale(0.94) translate3d(0, 25px, 0);
         }
         
-        /* Active class added on scrolling entry, removed on scrolling exit */
+        /* Active visible class added on scrolling entry, removed on scrolling exit */
         .reveal.visible {
             opacity: 1;
             transform: translate3d(0, 0, 0) scale(1);
@@ -179,7 +178,7 @@
         @media (min-width: 640px) {
             @keyframes infiniteScroll {
                 0% { transform: translate3d(0, 0, 0); }
-                100% { transform: translate3d(calc(-320px * 4), 0, 0); }
+                100% { transform: translate3d(calc(-340px * 4), 0, 0); }
             }
         }
 
@@ -192,7 +191,7 @@
 
         @media (min-width: 640px) {
             .carousel-track {
-                width: calc(320px * 8);
+                width: calc(340px * 8);
                 animation: infiniteScroll 35s linear infinite;
             }
         }
@@ -201,19 +200,40 @@
             animation-play-state: paused;
         }
 
+        /* Fixed outer frame sizing for all elements in the loop */
         .carousel-item {
             width: 280px;
-            height: 190px;
+            height: 200px;
             padding: 8px;
             flex-shrink: 0;
         }
 
         @media (min-width: 640px) {
             .carousel-item {
-                width: 320px;
-                height: 220px;
+                width: 340px;
+                height: 240px;
                 padding: 12px;
             }
+        }
+
+        /* Polished Polaroid and Ambient Art Gallery Border Framing */
+        .carousel-card-frame {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border: 6px solid #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.12),
+                        0 0 0 1px rgba(15, 23, 42, 0.05);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+
+        .carousel-card-frame:hover {
+            transform: scale(1.02) translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.16),
+                        0 0 0 1.5px rgba(13, 148, 136, 0.15);
         }
 
         /* Floating Liquid Bottom Navigation Panel */
@@ -308,24 +328,26 @@
         }
     </style>
 </head>
-<body class="font-sans text-slate-900 bg-slate-50 selection:bg-teal-100 selection:text-teal-900 overflow-x-hidden h-full flex flex-col justify-between">
+<body class="font-sans text-slate-900 bg-slate-50 selection:bg-teal-100 selection:text-teal-900 overflow-x-hidden min-h-screen flex flex-col justify-between">
 
     <!-- Brand Banner Bar -->
     <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 fixed w-full top-0 z-50 h-20 flex items-center justify-between px-4 sm:px-8">
-        <div class="flex items-center gap-3 cursor-pointer group" onclick="navigateTo('home')" aria-label="Pratap Dental Home">
-            <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 transition-transform group-hover:scale-105">
-                <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+        <div class="max-w-6xl mx-auto w-full flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer group" onclick="navigateTo('home')" aria-label="Pratap Dental Home">
+                <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 transition-transform group-hover:scale-105">
+                    <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg text-slate-900 tracking-tight leading-none uppercase">Pratap Dental Clinic</h1>
+                    <p class="text-[9px] text-teal-600 font-extrabold tracking-[0.25em] uppercase mt-1">Center for Excellence</p>
+                </div>
             </div>
-            <div>
-                <h1 class="font-bold text-base sm:text-lg text-slate-900 tracking-tight leading-none uppercase">Pratap Dental Clinic</h1>
-                <p class="text-[9px] text-teal-600 font-extrabold tracking-[0.25em] uppercase mt-1">Center for Excellence</p>
-            </div>
+            <!-- Quick CTA -->
+            <a href="tel:+918005427818" class="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-teal-50 hover:text-teal-700 px-4 py-2 rounded-xl text-xs font-bold text-slate-600 transition-all min-h-[44px]">
+                <i data-lucide="phone-call" class="w-4 h-4"></i>
+                <span>+91 80054 27818</span>
+            </a>
         </div>
-        <!-- Quick CTA -->
-        <a href="tel:+918005427818" class="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-teal-50 hover:text-teal-700 px-4 py-2 rounded-xl text-xs font-bold text-slate-600 transition-all min-h-[44px]">
-            <i data-lucide="phone-call" class="w-4 h-4"></i>
-            <span>+91 80054 27818</span>
-        </a>
     </header>
 
     <!-- Floating Liquid Bottom Navigation Panel -->
@@ -355,15 +377,15 @@
             <!-- ================= HOME PAGE ================= -->
             <section id="home-page" class="page active" aria-live="polite">
                 <!-- Premium Aesthetic Hero Unit -->
-                <div class="relative bg-white pt-10 pb-16 sm:pt-16 sm:pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
-                    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
+                <div class="relative bg-white pt-10 pb-16 sm:pt-20 sm:pb-28 lg:pt-28 lg:pb-36 overflow-hidden">
+                    <div class="max-w-6xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
                         
                         <!-- Hero Text and Call to Action -->
                         <div class="space-y-6 sm:space-y-8 reveal reveal-left text-center lg:text-left">
                             <span class="inline-block bg-teal-50 text-teal-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-100">
                                 Dr. Ajay Pratap Chauhan (B.D.S)
                             </span>
-                            <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-[1.15] lg:leading-[1.1] font-serif tracking-tight">
+                            <h2 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-[1.15] lg:leading-[1.1] font-serif tracking-tight">
                                 A Smile That <br class="hidden sm:inline">
                                 <span class="italic text-teal-600">Reflects</span> Confidence.
                             </h2>
@@ -401,87 +423,115 @@
                 </div>
 
                 <!-- Infinite Smooth Gallery Carousel -->
-                <div class="py-12 sm:py-16 bg-white border-y border-slate-100 overflow-hidden">
-                    <div class="max-w-7xl mx-auto px-4 mb-6 sm:mb-8 text-center reveal reveal-up">
+                <div class="py-12 sm:py-20 bg-white border-y border-slate-100 overflow-hidden">
+                    <div class="max-w-6xl mx-auto px-6 mb-6 sm:mb-10 text-center reveal reveal-scale">
                         <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400 block mb-2">Clinic Excellence Gallery</span>
                         <h3 class="text-2xl sm:text-3xl font-serif font-bold text-slate-800">State-Of-The-Art Workspace</h3>
                     </div>
-                    <div class="carousel-container relative reveal reveal-scale">
+                    <div class="carousel-container relative reveal reveal-scale max-w-6xl mx-auto">
                         <div class="carousel-track">
-                            <div class="carousel-item">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
-                                         alt="Patient treatment setup at Pratap Dental Clinic">
+                            <!-- Frame 1 -->
+                            <div class="carousel-item group">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Patient treatment setup at Pratap Dental Clinic">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         alt="Consultation area structure">
+                            <!-- Frame 2 -->
+                            <div class="carousel-item group">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Consultation area structure">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         alt="Clean, sterilized dental workspace equipment">
+                            <!-- Frame 3 -->
+                            <div class="carousel-item group">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Clean, sterilized dental workspace equipment">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         alt="Hygienic equipment arrangement">
+                            <!-- Frame 4 -->
+                            <div class="carousel-item group">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Hygienic equipment arrangement">
+                                    </div>
                                 </div>
                             </div>
                             
                             <!-- Duplicated Carousel Frames for Perfect Seamless CSS Loop -->
-                            <div class="carousel-item" aria-hidden="true">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
-                                         alt="Patient treatment setup duplicate">
+                            <div class="carousel-item group" aria-hidden="true">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Patient treatment setup duplicate">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" aria-hidden="true">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         alt="Consultation area structure duplicate">
+                            <div class="carousel-item group" aria-hidden="true">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Consultation area structure duplicate">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" aria-hidden="true">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         alt="Clean, sterilized duplicate">
+                            <div class="carousel-item group" aria-hidden="true">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Clean, sterilized duplicate">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" aria-hidden="true">
-                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         onload="this.parentElement.classList.remove('img-skeleton')"
-                                         alt="Hygienic duplicate">
+                            <div class="carousel-item group" aria-hidden="true">
+                                <div class="carousel-card-frame">
+                                    <div class="w-full h-full img-skeleton overflow-hidden rounded-xl">
+                                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
+                                             loading="lazy"
+                                             decoding="async"
+                                             onload="this.parentElement.classList.remove('img-skeleton')"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                             alt="Hygienic duplicate">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -489,9 +539,9 @@
                 </div>
 
                 <!-- Intro Section -->
-                <div class="py-16 sm:py-24 bg-white reveal reveal-up">
-                    <div class="max-w-4xl mx-auto px-4 text-center">
-                        <h3 class="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 font-serif text-slate-900">Comprehensive Dental Solutions</h3>
+                <div class="py-16 sm:py-24 bg-white reveal reveal-scale">
+                    <div class="max-w-4xl mx-auto px-6 text-center">
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 font-serif text-slate-900">Comprehensive Dental Solutions</h3>
                         <p class="text-slate-500 leading-relaxed text-base sm:text-lg max-w-3xl mx-auto font-medium">
                             We offer a complete, specialized spectrum of custom dental treatments under one sterile roof. From preventive routine checks to major prosthodontic reconstructions, we build smiles designed to stand the test of time.
                         </p>
@@ -501,15 +551,14 @@
 
             <!-- ================= SERVICES PAGE ================= -->
             <section id="services-page" class="page py-12 sm:py-24">
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="text-center mb-12 sm:mb-20 reveal reveal-up">
+                <div class="max-w-6xl mx-auto px-6 lg:px-12">
+                    <div class="text-center mb-12 sm:mb-20 reveal reveal-scale">
                         <span class="text-teal-600 font-bold uppercase tracking-widest text-xs block mb-2">Our Clinical Focus</span>
-                        <h2 class="text-3xl sm:text-5xl font-bold text-slate-900 mb-4 font-serif">Oral Healthcare Offerings</h2>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 font-serif">Oral Healthcare Offerings</h2>
                         <p class="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto font-medium">Precision dental procedures designed for families across Gorakhpur.</p>
                     </div>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                        
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
                         <!-- Service Card 1: Extractions -->
                         <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
                             <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
@@ -780,14 +829,14 @@
 
             <!-- ================= CONTACT PAGE ================= -->
             <section id="contact-page" class="page py-12 sm:py-24 bg-white">
-                <div class="max-w-7xl mx-auto px-4">
+                <div class="max-w-6xl mx-auto px-6 lg:px-12">
                     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         
                         <!-- Left Side: Clinic details & Working Hours -->
                         <div class="space-y-10">
                             <div class="reveal reveal-left">
                                 <span class="text-teal-600 font-bold uppercase tracking-widest text-xs block mb-2">We Are Here For You</span>
-                                <h2 class="text-4xl font-bold mb-4 font-serif tracking-tight text-slate-900">Visit Our Modern Facility</h2>
+                                <h2 class="text-3xl sm:text-4xl font-bold mb-4 font-serif tracking-tight text-slate-900">Visit Our Modern Facility</h2>
                                 <p class="text-base sm:text-lg text-slate-500 font-medium leading-relaxed">Located directly in Chauri Chaura, serving patients across Gorakhpur and surrounding cities with zero delay.</p>
                             </div>
                             
@@ -828,7 +877,7 @@
                             </div>
 
                             <!-- Schedule Panel -->
-                            <div class="reveal reveal-up glass-card p-8 rounded-[2rem] border border-teal-100/50 shadow-sm bg-teal-50/20">
+                            <div class="reveal reveal-scale glass-card p-8 rounded-[2rem] border border-teal-100/50 shadow-sm bg-teal-50/20">
                                 <div class="flex items-center gap-3 mb-6">
                                     <i data-lucide="clock" class="text-teal-600 w-5 h-5" aria-hidden="true"></i>
                                     <h4 class="font-bold text-lg text-slate-900">Weekly Consultation Hours</h4>
@@ -895,7 +944,7 @@
                                 </button>
                             </form>
                             
-                            <!-- Success Dialog Overlay (Touch accessibility compliant) -->
+                            <!-- Success Dialog Overlay -->
                             <div id="booking-success" class="absolute inset-0 bg-white/95 backdrop-blur-md rounded-[2rem] flex flex-col items-center justify-center text-center p-6 sm:p-10 opacity-0 pointer-events-none transition-all duration-300 z-30">
                                 <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mb-4 shadow-inner">
                                     <i data-lucide="check" class="w-8 h-8"></i>
@@ -923,8 +972,8 @@
     </main>
 
     <!-- Brand Footing Interface -->
-    <footer class="bg-slate-900 text-white pt-16 pb-28 md:pt-24 md:pb-12 reveal reveal-up">
-        <div class="max-w-7xl mx-auto px-4">
+    <footer class="bg-slate-900 text-white pt-16 pb-28 md:pt-24 md:pb-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
                 
                 <!-- Brand Description & Quick Sitemap -->
@@ -945,7 +994,7 @@
                     </div>
                 </div>
                 
-                <!-- Embedded Google Maps Layout (CLS Optimized) -->
+                <!-- Embedded Google Maps Layout -->
                 <div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-950 aspect-video lg:aspect-[16/10]">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.0055676836237!2d83.5686670745633!3d26.648304176805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399161f36996e703%3A0xf109dc5ada50e8b4!2sPRATAP%20DENTAL%20CLINIC!5e0!3m2!1sen!2sin!4v1779128212283!5m2!1sen!2sin" 
                             class="w-full h-full border-0" 
@@ -975,8 +1024,9 @@
             
             if (!targetPage || currentActivePage === targetPage) return;
 
-            // Fade and translate out existing active page
+            // Fade and translate out existing active page, and reset its reveal elements
             if (currentActivePage) {
+                currentActivePage.querySelectorAll('.reveal').forEach(el => el.classList.remove('visible'));
                 currentActivePage.style.transform = "translate3d(0, -12px, 0) scale(0.98)";
                 currentActivePage.style.opacity = "0";
                 
@@ -1016,30 +1066,34 @@
         }
 
         /**
-         * Custom intersection observer to handle in & out scrolling animations
-         * Toggles the '.visible' class based on entry and exit states
+         * Custom intersection observer to handle interactive in-and-out scroll animations
+         * Active state toggles automatically as elements enter/leave the screen
          */
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 } else {
-                    // Smooth exit animation on scroll out
+                    // Smoothly animate back out when scrolled out of view
                     entry.target.classList.remove('visible');
                 }
             });
         }, { 
             threshold: 0.05,
-            rootMargin: "-20px 0px -20px 0px"
+            rootMargin: "0px 0px -40px 0px" // Trigger slightly before the boundary to look incredibly natural
         });
 
         function refreshAnimations() {
             // Disconnect old elements to avoid duplicates before rebinding
             revealObserver.disconnect();
             
-            document.querySelectorAll('.reveal').forEach(el => {
-                revealObserver.observe(el);
-            });
+            // Observe reveal elements on the active page
+            const activePage = document.querySelector('.page.active');
+            if (activePage) {
+                activePage.querySelectorAll('.reveal').forEach(el => {
+                    revealObserver.observe(el);
+                });
+            }
         }
 
         // Global Variables for Form Processing
