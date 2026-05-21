@@ -1,15 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratap Dental Clinic | Dr. Ajay P. Chauhan</title>
-    <!-- Tailwind CSS for high fidelity responsive utilities -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Premium SEO Meta Tags -->
+    <title>Pratap Dental Clinic | Dr. Ajay P. Chauhan | Best Dentist in Gorakhpur</title>
+    <meta name="description" content="Looking for the best dentist in Chauri Chaura, Gorakhpur? Pratap Dental Clinic, led by Dr. Ajay Pratap Chauhan (B.D.S), offers premium, painless root canal (RCT), dental implants, teeth whitening, cosmetic dentistry, and dental checkups. Book your slot online today!">
+    <meta name="keywords" content="Pratap Dental Clinic, Dr Ajay Pratap Chauhan, Dentist in Gorakhpur, Dentist in Chauri Chaura, Dental Clinic Gorakhpur, Root Canal Gorakhpur, Teeth Whitening, Dental Implants UP, Best Dental Doctor Chauri Chaura">
+    <meta name="author" content="Pratap Dental Clinic">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Social Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pratapdentalclinic.com/">
+    <meta property="og:title" content="Pratap Dental Clinic | Dr. Ajay P. Chauhan | Gorakhpur">
+    <meta property="og:description" content="Expert dental solutions with a gentle touch. Painless RCT, implants, cosmetic smiles, and complete oral care in Chauri Chaura, Gorakhpur.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pratap Dental Clinic | Dr. Ajay P. Chauhan">
+    <meta name="twitter:description" content="Experience precision-driven dental diagnostics and premium clinic solutions in Chauri Chaura, Gorakhpur. Book appointments instantly.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Preconnecting to CDNs for peak loading performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Local Business JSON-LD Schema (Crucial for Local Map Pack Rankings) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Pratap Dental Clinic",
+      "image": "https://lh3.googleusercontent.com/u/0/d/1uJrg7pO0v97V2s7Eard-8ddLLxUD7yjj",
+      "@id": "https://pratapdentalclinic.com/#clinic",
+      "url": "https://pratapdentalclinic.com",
+      "telephone": "+918005427818",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dumari Khurd, Chauri Chaura",
+        "addressLocality": "Gorakhpur",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "273202",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.648304,
+        "longitude": 83.568667
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://maps.google.com/?cid=17368541762114873524"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons for clean, vector-based interactive icons -->
+    
+    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Premium font families for dental clinic branding -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght=300;400;500;600;700&family=Playfair+Display:ital,wght=0,700;0,800;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght=400;500;600;700&family=Playfair+Display:ital,wght=0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -28,47 +103,97 @@
             }
         }
     </script>
+    
     <style>
-        html { scroll-behavior: smooth; }
-        
-        .page { display: none; min-height: 70vh; }
-        .page.active { display: block; }
-        
-        /* Modern entry transitions for section load state */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        html { 
+            scroll-behavior: smooth; 
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
         }
         
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* Hardware-accelerated sliding cross-fade transitions for SPA router system */
+        .page-container {
+            position: relative;
+            width: 100%;
         }
 
-        /* Responsive Infinite Gallery Carousel Animation */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-280px * 4)); }
+        .page { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translate3d(0, 24px, 0) scale(0.98);
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 450ms cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 450ms cubic-bezier(0.16, 1, 0.3, 1), 
+                        visibility 450ms;
+            will-change: transform, opacity;
+        }
+
+        .page.active { 
+            position: relative;
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* Scroll-linked reveal animations (triggers entering AND exiting viewports) */
+        .reveal {
+            opacity: 0;
+            transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+        
+        .reveal-up {
+            transform: translate3d(0, 45px, 0);
+        }
+
+        .reveal-left {
+            transform: translate3d(-45px, 0, 0);
+        }
+
+        .reveal-right {
+            transform: translate3d(45px, 0, 0);
+        }
+
+        .reveal-scale {
+            transform: scale(0.92) translate3d(0, 20px, 0);
+        }
+        
+        /* Active class added on scrolling entry, removed on scrolling exit */
+        .reveal.visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        /* Infinite Smooth Carousel Animation Loop */
+        @keyframes infiniteScroll {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(calc(-280px * 4), 0, 0); }
         }
 
         @media (min-width: 640px) {
-            @keyframes scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-320px * 4)); }
+            @keyframes infiniteScroll {
+                0% { transform: translate3d(0, 0, 0); }
+                100% { transform: translate3d(calc(-320px * 4), 0, 0); }
             }
         }
 
         .carousel-track {
             display: flex;
             width: calc(280px * 8);
-            animation: scroll 30s linear infinite;
+            animation: infiniteScroll 25s linear infinite;
+            will-change: transform;
         }
 
         @media (min-width: 640px) {
             .carousel-track {
                 width: calc(320px * 8);
-                animation: scroll 40s linear infinite;
+                animation: infiniteScroll 35s linear infinite;
             }
         }
 
@@ -79,7 +204,7 @@
         .carousel-item {
             width: 280px;
             height: 190px;
-            padding: 10px;
+            padding: 8px;
             flex-shrink: 0;
         }
 
@@ -87,39 +212,31 @@
             .carousel-item {
                 width: 320px;
                 height: 220px;
-                padding: 15px;
+                padding: 12px;
             }
         }
 
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 1.25rem;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
-        }
-
-        /* Completely restructured for mobile-responsive fluid width and touch ergonomics */
+        /* Floating Liquid Bottom Navigation Panel */
         .liquid-nav {
             position: fixed;
             bottom: 20px;
             left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: translate3d(-50%, 0, 0);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
             padding: 6px;
             border-radius: 100px;
             display: flex;
             align-items: center;
             gap: 4px;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
             z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2);
             width: calc(100% - 32px);
             max-width: 420px;
             justify-content: space-between;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
         @media (min-width: 640px) {
@@ -133,18 +250,20 @@
             }
         }
 
+        /* High Touch Target Options */
         .nav-item {
-            padding: 10px 14px;
+            padding: 12px 16px;
             border-radius: 100px;
             font-size: 13px;
             font-weight: 600;
             color: #64748b;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             align-items: center;
             gap: 6px;
             flex-grow: 1;
             justify-content: center;
+            min-height: 44px;
         }
 
         @media (min-width: 640px) {
@@ -159,493 +278,656 @@
         .nav-item.active {
             background: #0d9488;
             color: white;
-            box-shadow: 0 8px 15px rgba(13, 148, 136, 0.2);
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
         }
 
         .nav-item:hover:not(.active) {
-            background: rgba(13, 148, 136, 0.05);
+            background: rgba(13, 148, 136, 0.06);
             color: #0d9488;
         }
 
-        /* Interactive Service Cards with Hover Dynamics */
         .service-card { 
-            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-            background: white;
-            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .service-card:hover { 
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(13, 148, 136, 0.15);
-            border-color: rgba(13, 148, 136, 0.15);
+            transform: translate3d(0, -6px, 0);
+            box-shadow: 0 20px 40px -10px rgba(13, 148, 136, 0.12);
         }
 
-        .top-brand-bar {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        /* Simple loading skeleton overlay */
+        .img-skeleton {
+            background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+            background-size: 200% 100%;
+            animation: skeletonLoading 1.5s infinite;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+        @keyframes skeletonLoading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
     </style>
 </head>
-<body class="font-sans text-slate-900 bg-slate-50 selection:bg-teal-100 selection:text-teal-900 overflow-x-hidden">
+<body class="font-sans text-slate-900 bg-slate-50 selection:bg-teal-100 selection:text-teal-900 overflow-x-hidden h-full flex flex-col justify-between">
 
-    <!-- Top Brand Header -->
-    <header class="top-brand-bar fixed w-full top-0 z-50 h-20 flex items-center justify-center px-4">
-        <div class="flex flex-col items-center cursor-pointer group" onclick="navigateTo('home')">
-            <h1 class="font-bold text-lg sm:text-xl text-slate-900 tracking-tight leading-none uppercase">Pratap Dental Clinic</h1>
-            <p class="text-[9px] sm:text-[10px] text-teal-600 font-bold tracking-[0.25em] sm:tracking-[0.3em] uppercase mt-1">Center for Excellence</p>
+    <!-- Brand Banner Bar -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 fixed w-full top-0 z-50 h-20 flex items-center justify-between px-4 sm:px-8">
+        <div class="flex items-center gap-3 cursor-pointer group" onclick="navigateTo('home')" aria-label="Pratap Dental Home">
+            <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 transition-transform group-hover:scale-105">
+                <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-base sm:text-lg text-slate-900 tracking-tight leading-none uppercase">Pratap Dental Clinic</h1>
+                <p class="text-[9px] text-teal-600 font-extrabold tracking-[0.25em] uppercase mt-1">Center for Excellence</p>
+            </div>
         </div>
+        <!-- Quick CTA -->
+        <a href="tel:+918005427818" class="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-teal-50 hover:text-teal-700 px-4 py-2 rounded-xl text-xs font-bold text-slate-600 transition-all min-h-[44px]">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>+91 80054 27818</span>
+        </a>
     </header>
 
-    <!-- Floating Liquid Nav -->
-    <div class="liquid-nav">
-        <button onclick="navigateTo('home')" class="nav-item active" data-page="home" aria-label="Home">
+    <!-- Floating Liquid Bottom Navigation Panel -->
+    <nav class="liquid-nav" aria-label="Primary Navigation">
+        <button onclick="navigateTo('home')" class="nav-item active" data-page="home" aria-label="Go to Home Page">
             <i data-lucide="home" class="w-4 h-4 sm:w-[18px] sm:h-[18px]"></i>
-            <span class="hidden md:inline">Home</span>
+            <span>Home</span>
         </button>
-        <button onclick="navigateTo('services')" class="nav-item" data-page="services" aria-label="Services">
+        <button onclick="navigateTo('services')" class="nav-item" data-page="services" aria-label="Go to Services Page">
             <i data-lucide="sparkles" class="w-4 h-4 sm:w-[18px] sm:h-[18px]"></i>
-            <span class="hidden md:inline">Services</span>
+            <span>Services</span>
         </button>
-        <button onclick="navigateTo('contact')" class="nav-item" data-page="contact" aria-label="Contact">
+        <button onclick="navigateTo('contact')" class="nav-item" data-page="contact" aria-label="Go to Contact Page">
             <i data-lucide="calendar" class="w-4 h-4 sm:w-[18px] sm:h-[18px]"></i>
-            <span class="hidden md:inline">Contact</span>
+            <span>Contact</span>
         </button>
-        <div class="w-px h-6 bg-slate-200 mx-1 shrink-0"></div>
-        <a href="https://wa.me/+918005427818" target="_blank" class="w-10 h-10 sm:w-11 sm:h-11 bg-teal-600 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform shadow-lg shadow-teal-200 shrink-0" aria-label="Call or WhatsApp">
-            <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        <div class="w-px h-6 bg-slate-200 mx-1 shrink-0" aria-hidden="true"></div>
+        <a href="https://wa.me/+918005427818?text=Hello%20Dr.%20Ajay,%20I'd%20like%20to%20book%20a%20dental%20appointment." target="_blank" class="w-10 h-10 sm:w-11 sm:h-11 bg-teal-600 text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-teal-100 shrink-0" aria-label="Connect via WhatsApp">
+            <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5"></i>
         </a>
-    </div>
+    </nav>
 
-    <!-- Main Content -->
-    <main class="pt-20 pb-28 md:pb-36">
-        
-        <!-- HOME PAGE -->
-        <section id="home-page" class="page active">
-            <!-- Hero -->
-            <div class="relative bg-white pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
-                    <div class="space-y-6 sm:space-y-8 reveal text-center lg:text-left">
-                        <span class="inline-block bg-teal-50 text-teal-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-100">
-                            Dr. Ajay Pratap Chauhan (B.D.S)
-                        </span>
-                        <h2 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.15] lg:leading-[1.1] font-serif tracking-tight">
-                            A Smile That <br class="hidden sm:inline">
-                            <span class="italic text-teal-600">Reflects</span> Confidence.
-                        </h2>
-                        <p class="text-base sm:text-lg text-slate-500 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
-                            Providing modern dental solutions with a gentle touch. From routine checkups to advanced implants, your comfort is our priority.
-                        </p>
-                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
-                            <button onclick="navigateTo('contact')" class="w-full sm:w-auto bg-teal-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold hover:bg-teal-700 transition-all shadow-xl hover:-translate-y-0.5">Book Appointment</button>
-                            <button onclick="navigateTo('services')" class="w-full sm:w-auto bg-white border border-slate-200 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold hover:bg-slate-50 transition-all">View Treatments</button>
+    <!-- Interactive Main Section Router Wrapper -->
+    <main class="pt-20 relative flex-grow">
+        <div class="page-container relative w-full h-full">
+            
+            <!-- ================= HOME PAGE ================= -->
+            <section id="home-page" class="page active" aria-live="polite">
+                <!-- Premium Aesthetic Hero Unit -->
+                <div class="relative bg-white pt-10 pb-16 sm:pt-16 sm:pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
+                    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
+                        
+                        <!-- Hero Text and Call to Action -->
+                        <div class="space-y-6 sm:space-y-8 reveal reveal-left text-center lg:text-left">
+                            <span class="inline-block bg-teal-50 text-teal-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-teal-100">
+                                Dr. Ajay Pratap Chauhan (B.D.S)
+                            </span>
+                            <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-[1.15] lg:leading-[1.1] font-serif tracking-tight">
+                                A Smile That <br class="hidden sm:inline">
+                                <span class="italic text-teal-600">Reflects</span> Confidence.
+                            </h2>
+                            <p class="text-base sm:text-lg text-slate-500 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
+                                Providing modern dental solutions with a gentle touch. From routine dental checkups to advanced dental implants, your comfort is our clinic's priority.
+                            </p>
+                            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                                <button onclick="navigateTo('contact')" class="w-full sm:w-auto bg-teal-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold hover:bg-teal-700 transition-all shadow-xl hover:-translate-y-0.5 active:translate-y-0 shadow-teal-200">
+                                    Book Appointment
+                                </button>
+                                <button onclick="navigateTo('services')" class="w-full sm:w-auto bg-white border border-slate-200 text-slate-700 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    View Treatments
+                                </button>
+                            </div>
                         </div>
+                        
+                        <!-- Hero Graphics Container -->
+                        <div class="relative reveal reveal-right mt-8 lg:mt-0 max-w-lg mx-auto lg:max-w-none w-full">
+                            <div class="absolute -right-10 sm:-right-20 -top-10 sm:-top-20 w-64 sm:w-96 h-64 sm:h-96 bg-teal-50 rounded-full blur-3xl opacity-60" aria-hidden="true"></div>
+                            <div class="relative group">
+                                <div class="absolute -inset-3 bg-gradient-to-tr from-teal-500/20 to-emerald-400/20 rounded-[2.5rem] sm:rounded-[3.5rem] blur transition-opacity" aria-hidden="true"></div>
+                                <div class="relative aspect-[4/3] w-full rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-slate-200 border-4 sm:border-8 border-white shadow-2xl img-skeleton">
+                                    <img src="https://lh3.googleusercontent.com/u/0/d/1uJrg7pO0v97V2s7Eard-8ddLLxUD7yjj" 
+                                         loading="eager" 
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';"
+                                         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                                         alt="Modern treatment room layout inside Pratap Dental Clinic">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Infinite Smooth Gallery Carousel -->
+                <div class="py-12 sm:py-16 bg-white border-y border-slate-100 overflow-hidden">
+                    <div class="max-w-7xl mx-auto px-4 mb-6 sm:mb-8 text-center reveal reveal-up">
+                        <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400 block mb-2">Clinic Excellence Gallery</span>
+                        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-slate-800">State-Of-The-Art Workspace</h3>
+                    </div>
+                    <div class="carousel-container relative reveal reveal-scale">
+                        <div class="carousel-track">
+                            <div class="carousel-item">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
+                                         alt="Patient treatment setup at Pratap Dental Clinic">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         alt="Consultation area structure">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         alt="Clean, sterilized dental workspace equipment">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         alt="Hygienic equipment arrangement">
+                                </div>
+                            </div>
+                            
+                            <!-- Duplicated Carousel Frames for Perfect Seamless CSS Loop -->
+                            <div class="carousel-item" aria-hidden="true">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
+                                         alt="Patient treatment setup duplicate">
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-hidden="true">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         alt="Consultation area structure duplicate">
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-hidden="true">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         alt="Clean, sterilized duplicate">
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-hidden="true">
+                                <div class="w-full h-full img-skeleton rounded-2xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
+                                         loading="lazy"
+                                         decoding="async"
+                                         onload="this.parentElement.classList.remove('img-skeleton')"
+                                         alt="Hygienic duplicate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intro Section -->
+                <div class="py-16 sm:py-24 bg-white reveal reveal-up">
+                    <div class="max-w-4xl mx-auto px-4 text-center">
+                        <h3 class="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 font-serif text-slate-900">Comprehensive Dental Solutions</h3>
+                        <p class="text-slate-500 leading-relaxed text-base sm:text-lg max-w-3xl mx-auto font-medium">
+                            We offer a complete, specialized spectrum of custom dental treatments under one sterile roof. From preventive routine checks to major prosthodontic reconstructions, we build smiles designed to stand the test of time.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SERVICES PAGE ================= -->
+            <section id="services-page" class="page py-12 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12 sm:mb-20 reveal reveal-up">
+                        <span class="text-teal-600 font-bold uppercase tracking-widest text-xs block mb-2">Our Clinical Focus</span>
+                        <h2 class="text-3xl sm:text-5xl font-bold text-slate-900 mb-4 font-serif">Oral Healthcare Offerings</h2>
+                        <p class="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto font-medium">Precision dental procedures designed for families across Gorakhpur.</p>
                     </div>
                     
-                    <div class="relative reveal mt-8 lg:mt-0 max-w-lg mx-auto lg:max-w-none w-full">
-                        <div class="absolute -right-10 sm:-right-20 -top-10 sm:-top-20 w-64 sm:w-96 h-64 sm:h-96 bg-teal-50 rounded-full blur-3xl opacity-60"></div>
-                        <div class="relative group">
-                            <div class="absolute -inset-3 bg-gradient-to-tr from-teal-500/20 to-emerald-400/20 rounded-[2.5rem] sm:rounded-[3.5rem] blur transition-opacity"></div>
-                            <img src="https://lh3.googleusercontent.com/u/0/d/1uJrg7pO0v97V2s7Eard-8ddLLxUD7yjj" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';"
-                                 class="relative rounded-[2rem] sm:rounded-[3rem] shadow-2xl object-cover aspect-[4/3] w-full border-4 sm:border-8 border-white" 
-                                 alt="Pratap Dental Clinic Interior Room">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image Carousel Component -->
-            <div class="py-12 sm:py-16 bg-white border-y border-slate-100 overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 mb-8 sm:mb-10 text-center">
-                    <h3 class="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400">Clinic Excellence Gallery</h3>
-                </div>
-                <div class="carousel-container relative">
-                    <div class="carousel-track">
-                        <!-- Clinical Showcase item with provided Google Drive link and duplicates -->
-                        <div class="carousel-item">
-                            <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
-                                 alt="Patient Care Setup">
-                        </div>
-                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" alt="Consultation Space"></div>
-                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Modern Tech Equipment"></div>
-                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" alt="Sanitation Standards"></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                         
-                        <!-- Duplicated Carousel Frames for Seamless Wrap-around Loops -->
-                        <div class="carousel-item">
-                            <img src="https://lh3.googleusercontent.com/d/1Utd_FkHKeO6T7MdvuBlFZwAoYZTrMvWj" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909608115-f94f5735746c?auto=format&fit=crop&q=80&w=800';" 
-                                 alt="Patient Care Setup Dupe">
+                        <!-- Service Card 1: Extractions -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1XK6VQBHvVJrOFtLOtWb9hradEfZMaaQ-" 
+                                     loading="lazy" 
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Painless Tooth Extractions treatment">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="activity" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Extractions</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Painless removal of compromised, decayed, or severely damaged teeth using precise local anesthesia protocols.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" alt="Consultation Space Dupe"></div>
-                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Modern Tech Equipment Dupe"></div>
-                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" alt="Sanitation Standards Dupe"></div>
+
+                        <!-- Service Card 2: Crown & Bridges -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1dr6mglNNBjANkOe1cYeHv9Ok35-1TonT" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Dental crowns and bridge restorations">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="component" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Crown and Bridges</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Reconstructive crowns and bridges using premium materials to optimize your bite force, function, and beautiful smile.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 3: Tooth Colored Filling -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1YOj4fCFlJMbyOfyFAkX2AyjL7rc_Zy9t" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Composite cosmetic dental fillings">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="palette" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Tooth Colored Filling</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Virtually invisible high-grade composite materials to treat cavities, restore enamel damage, and block tooth decay.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 4: Tooth Sensitivity -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1VmE2jDnFjkrLavjUmy7BtQ5OzYJHNFdA" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Desensitization therapy for teeth">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Tooth Sensitivity</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Comprehensive targeted therapies to cure nerve irritation, restore enamel structure, and alleviate cold/heat pain.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 5: Teeth Whitening -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1C-hdbh3M7uFobHx2Da2TfBiGOVrzLzem" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1445527265819-217830312015?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Cosmetic teeth bleaching treatments">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="sun" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Bleaching of Teeth</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">In-office whitening procedures designed to remove deep enamel stains and naturally brighten your smile safely.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 6: Impaction Surgery -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1MXbIj8nl1SslnhdCRp3pWuRYCrAglpmU" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Surgical wisdom tooth impaction treatment">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="scissors" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Impaction (Surgical)</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Minor oral surgery targeting complicated wisdom tooth impactions to alleviate chronic alignment and jaw pain.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 7: Cleaning -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1aOaTJsA6xz--9__I1l4mekpJ9W10h77S" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Oral cleaning and plaque removal polishing">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="brush" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Cleaning & Polishing</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Proactive scaling and polishing to keep gums healthy, remove tartar deposits, and treat bad breath.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 8: RCT -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/17Pf5c3_NPCUP5eWWBYeZpgZgxm6Q_Shq" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Root Canal Treatment at Pratap Dental">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="zap" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Root Canal Treatment (RCT)</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Advanced microscopic root canal therapy to eliminate infection inside pulp and salvage natural teeth.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 9: Implants -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1nr2szy9Y2PxfG0vKDF0lhSSDVIl8ExzQ" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Titanium post dental implant solutions">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="anchor" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Dental Implant</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Biocompatible surgical implants offering permanent root stabilization for lifelike tooth replacements.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 10: X-Ray -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1ginDSigNFWkhhKqOZVbZxirFjiLPKEpN" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="High frequency digital dental X-ray imaging">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="scan" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Digital X-ray</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Low-radiation digital radiography for accurate diagnostic mapping of inner bone and teeth roots.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 11: Dentures -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/13PjhBwQSteawc4RyyY4FqLKvM-3WIbeP" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513224502586-d1e602410265?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Complete and partial removable dentures">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="columns" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Complete/Partial Denture</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Lightweight full-mouth or partial dentures tailored perfectly to restore natural speech and bite dynamics.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 12: Pediatric Dentistry -->
+                        <div class="service-card reveal reveal-scale overflow-hidden rounded-[1.75rem] bg-white group flex flex-col h-full shadow-sm border border-slate-100">
+                            <div class="relative h-48 overflow-hidden bg-slate-100 img-skeleton">
+                                <img src="https://lh3.googleusercontent.com/d/1k1uDnrXPqje3ZHvH58KBCnveBP2iXWK0" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     onload="this.parentElement.classList.remove('img-skeleton')"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1445527265819-217830312015?auto=format&fit=crop&q=80&w=600';"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                     alt="Friendly pediatric dental treatments">
+                                <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+                                    <i data-lucide="baby" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Pediatric Dentistry</h3>
+                                    <p class="text-slate-500 text-sm leading-relaxed font-medium">Extremely gentle and warm clinical oral care designed to keep children safe and happy during dental sessions.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Intro Section -->
-            <div class="py-16 sm:py-24 bg-white reveal">
-                <div class="max-w-4xl mx-auto px-4 text-center">
-                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 font-serif">Comprehensive Dental Solutions</h3>
-                    <p class="text-slate-500 leading-relaxed text-base sm:text-lg">We offer a full spectrum of dental treatments from preventative care to complex oral surgeries, ensuring every patient receives a personalized experience in a sterile and welcoming environment.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES PAGE -->
-        <section id="services-page" class="page py-12 sm:py-24">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-12 sm:mb-20 reveal">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 font-serif">Our Expertise</h2>
-                    <p class="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">Precision-driven treatments designed for the whole family.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    <!-- Service Card 1: Extractions (Updated Image) -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1XK6VQBHvVJrOFtLOtWb9hradEfZMaaQ-" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Extractions Treatment">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="activity" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Extractions</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Safe removal of problematic or damaged teeth under local anesthesia to relieve pain and prevent infection.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 2: Crown & Bridges (Updated Image) -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1dr6mglNNBjANkOe1cYeHv9Ok35-1TonT" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Crown and Bridges">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="component" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Crown and Bridges</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Restores damaged teeth or replaces missing ones using custom-made prosthetics for strength and aesthetics.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 3: Tooth Colored Filling (Updated Image) -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1YOj4fCFlJMbyOfyFAkX2AyjL7rc_Zy9t" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Tooth Colored Filling">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="palette" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Tooth Colored Filling</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Natural-looking composite material repairs cavities, cracks, or chips, blending seamlessly with existing teeth.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 4: Tooth Sensitivity (Updated Image) -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1VmE2jDnFjkrLavjUmy7BtQ5OzYJHNFdA" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Tooth Sensitivity">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="shield-alert" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Tooth Sensitivity</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Specialized care targets nerve exposure or enamel loss, reducing discomfort from hot, cold, or sweet foods.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 5: Bleaching of Teeth (Updated Image) -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1C-hdbh3M7uFobHx2Da2TfBiGOVrzLzem" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1445527265819-217830312015?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Bleaching of Teeth">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="sun" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Bleaching of Teeth</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Uses safe whitening agents to lighten stains and restore natural brightness to your smile.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 6: Impaction Surgery -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1MXbIj8nl1SslnhdCRp3pWuRYCrAglpmU" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Impaction Surgery">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="scissors" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Impaction (Surgical)</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Surgically removes unerupted or impacted teeth, especially wisdom teeth, to prevent crowding.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 7: Cleaning -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1aOaTJsA6xz--9__I1l4mekpJ9W10h77S" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Cleaning and Polishing">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="brush" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Cleaning & Polishing</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Professional cleaning eliminates plaque, tartar, and stains, leaving gums healthier and teeth brighter.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 8: RCT -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/17Pf5c3_NPCUP5eWWBYeZpgZgxm6Q_Shq" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Root Canal Treatment">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="zap" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Root Canal Treatment</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Removes infected pulp, cleans the inside, and seals it to save the natural tooth structure.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 9: Implants -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1nr2szy9Y2PxfG0vKDF0lhSSDVIl8ExzQ" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Dental Implant">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="anchor" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Dental Implant</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Permanent, natural-feeling tooth replacement with titanium posts supporting custom crowns.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 10: X-Ray -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1ginDSigNFWkhhKqOZVbZxirFjiLPKEpN" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Digital X-ray">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="scan" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Digital X-ray</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Advanced imaging offers fast, detailed views with minimal radiation for accurate diagnosis.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 11: Dentures -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/13PjhBwQSteawc4RyyY4FqLKvM-3WIbeP" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513224502586-d1e602410265?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Complete Dentures">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="columns" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Complete/Partial Denture</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Removable prosthetic options replace missing teeth, restore chewing, and improve speech.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 12: Pediatric -->
-                    <div class="service-card reveal overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] bg-white group flex flex-col h-full shadow-sm">
-                        <div class="relative h-48 overflow-hidden bg-slate-100">
-                            <img src="https://lh3.googleusercontent.com/d/1k1uDnrXPqje3ZHvH58KBCnveBP2iXWK0" 
-                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1445527265819-217830312015?auto=format&fit=crop&q=80&w=600';"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                                 alt="Pediatric Dentistry">
-                            <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur text-teal-600 rounded-xl flex items-center justify-center shadow-sm">
-                                <i data-lucide="baby" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold mb-2 text-slate-900 group-hover:text-teal-600 transition-colors">Pediatric Dentistry</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">Comprehensive care for children, focusing on prevention and developing healthy dental habits.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT PAGE -->
-        <section id="contact-page" class="page py-12 sm:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-                    <!-- Left Side: Clinic details -->
-                    <div class="space-y-10">
-                        <div class="reveal">
-                            <h2 class="text-4xl font-bold mb-4 font-serif tracking-tight text-slate-900">Visit Our Clinic</h2>
-                            <p class="text-base sm:text-lg text-slate-500 font-medium leading-relaxed">Located in the heart of Chauri Chaura, serving patients across Gorakhpur.</p>
-                        </div>
+            <!-- ================= CONTACT PAGE ================= -->
+            <section id="contact-page" class="page py-12 sm:py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         
-                        <!-- Details Grid -->
-                        <div class="grid gap-4">
-                            <!-- Location -->
-                            <div class="reveal flex items-center gap-6 p-6 bg-slate-50 rounded-[1.75rem] border border-slate-100">
-                                <div class="bg-teal-600 text-white p-3 rounded-2xl flex items-center justify-center shrink-0 w-12 h-12">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-1">Location</p>
-                                    <p class="font-bold text-slate-900 text-sm sm:text-base">Dumari Khurd, Chauri Chaura, UP 273202</p>
-                                </div>
+                        <!-- Left Side: Clinic details & Working Hours -->
+                        <div class="space-y-10">
+                            <div class="reveal reveal-left">
+                                <span class="text-teal-600 font-bold uppercase tracking-widest text-xs block mb-2">We Are Here For You</span>
+                                <h2 class="text-4xl font-bold mb-4 font-serif tracking-tight text-slate-900">Visit Our Modern Facility</h2>
+                                <p class="text-base sm:text-lg text-slate-500 font-medium leading-relaxed">Located directly in Chauri Chaura, serving patients across Gorakhpur and surrounding cities with zero delay.</p>
                             </div>
                             
-                            <!-- Hotline -->
-                            <div class="reveal flex items-center gap-6 p-6 bg-slate-50 rounded-[1.75rem] border border-slate-100">
-                                <div class="bg-teal-600 text-white p-3 rounded-2xl flex items-center justify-center shrink-0 w-12 h-12">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                            <!-- Detailed Physical Grid Info -->
+                            <div class="grid gap-4">
+                                <!-- Physical Address -->
+                                <div class="reveal reveal-left flex items-center gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <div class="bg-teal-600 text-white p-3 rounded-2xl flex items-center justify-center shrink-0 w-12 h-12" aria-hidden="true">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-1">Clinical Address</p>
+                                        <p class="font-bold text-slate-800 text-sm sm:text-base">Dumari Khurd, Chauri Chaura, UP 273202</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-1">Hotline</p>
-                                    <p class="font-bold text-slate-900 text-sm sm:text-base">+91 80054 27818</p>
-                                </div>
+                                
+                                <!-- Hotline Phone -->
+                                <a href="tel:+918005427818" class="reveal reveal-left flex items-center gap-6 p-6 bg-slate-50 hover:bg-teal-50/40 rounded-2xl border border-slate-100 transition-all group min-h-[48px]">
+                                    <div class="bg-teal-600 text-white p-3 rounded-2xl flex items-center justify-center shrink-0 w-12 h-12 group-hover:scale-105 transition-transform" aria-hidden="true">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-1">Clinic Hotline</p>
+                                        <p class="font-bold text-teal-600 text-sm sm:text-base">+91 80054 27818</p>
+                                    </div>
+                                </a>
+                                
+                                <!-- Official Email -->
+                                <a href="mailto:pratapdentalclinic89@gmail.com" class="reveal reveal-left flex items-center gap-6 p-6 bg-slate-50 hover:bg-teal-50/40 rounded-2xl border border-slate-100 transition-all group min-h-[48px]">
+                                    <div class="bg-teal-600 text-white p-3 rounded-2xl flex items-center justify-center shrink-0 w-12 h-12 group-hover:scale-105 transition-transform" aria-hidden="true">
+                                        <i data-lucide="mail" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-1">Email Support</p>
+                                        <p class="font-bold text-teal-600 text-sm sm:text-base break-all">pratapdentalclinic89@gmail.com</p>
+                                    </div>
+                                </a>
                             </div>
-                            
-                            <!-- Email -->
-                            <div class="reveal flex items-center gap-6 p-6 bg-slate-50 rounded-[1.75rem] border border-slate-100">
-                                <div class="bg-teal-600 text-white p-3 rounded-2xl flex items-center justify-center shrink-0 w-12 h-12">
-                                    <i data-lucide="mail" class="w-5 h-5"></i>
+
+                            <!-- Schedule Panel -->
+                            <div class="reveal reveal-up glass-card p-8 rounded-[2rem] border border-teal-100/50 shadow-sm bg-teal-50/20">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <i data-lucide="clock" class="text-teal-600 w-5 h-5" aria-hidden="true"></i>
+                                    <h4 class="font-bold text-lg text-slate-900">Weekly Consultation Hours</h4>
                                 </div>
-                                <div>
-                                    <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-1">Email</p>
-                                    <p class="font-bold text-slate-900 text-sm sm:text-base">pratapdentalclinic89@gmail.com</p>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center text-sm py-1 border-b border-slate-100">
+                                        <span class="text-slate-500 font-semibold">Monday — Saturday</span>
+                                        <span class="font-extrabold text-slate-800">10:00 AM – 08:00 PM</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-sm py-1 border-b border-slate-100">
+                                        <span class="text-slate-500 font-semibold">Sunday</span>
+                                        <span class="font-extrabold text-slate-800">10:00 AM – 08:00 PM</span>
+                                    </div>
                                 </div>
+                                <p class="text-xs text-slate-400 italic mt-4">* Note: Operational hours might differ on state-mandated holidays.</p>
                             </div>
                         </div>
 
-                        <!-- Schedule Card -->
-                        <div class="reveal glass-card p-8 rounded-[2.25rem] border border-teal-100/50 shadow-sm">
-                            <div class="flex items-center gap-3 mb-6">
-                                <i data-lucide="clock" class="text-teal-600 w-5 h-5"></i>
-                                <h4 class="font-bold text-lg text-slate-900">Weekly Schedule</h4>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="flex justify-between items-center text-sm py-1 border-b border-slate-100">
-                                    <span class="text-slate-500 font-medium">Mon — Sat</span>
-                                    <span class="font-bold text-slate-800">10:00 AM – 08:00 PM</span>
+                        <!-- Right Side: Booking Form -->
+                        <div class="reveal reveal-right bg-white border border-slate-100 p-6 sm:p-10 rounded-[2rem] shadow-2xl shadow-slate-100 relative">
+                            <h3 class="text-2xl font-bold mb-2 font-serif text-slate-900">Instant Online Booking</h3>
+                            <p class="text-slate-400 text-sm mb-6 font-medium">Get a dynamic WhatsApp Data Slip with your booking details.</p>
+                            
+                            <form id="contactForm" class="space-y-5">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="form-name" class="block text-xs font-bold text-slate-500 uppercase mb-2">Patient Full Name</label>
+                                        <input id="form-name" type="text" required placeholder="eg. Amit Kumar" class="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-500/20 outline-none font-medium transition-all text-slate-800 min-h-[44px]">
+                                    </div>
+                                    <div>
+                                        <label for="form-phone" class="block text-xs font-bold text-slate-500 uppercase mb-2">Active Contact No</label>
+                                        <input id="form-phone" type="tel" required placeholder="eg. 9876543210" pattern="[0-9]{10}" class="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-500/20 outline-none font-medium transition-all text-slate-800 min-h-[44px]">
+                                    </div>
                                 </div>
-                                <div class="flex justify-between items-center text-sm py-1 border-b border-slate-100">
-                                    <span class="text-slate-500 font-medium">Sunday</span>
-                                    <span class="font-bold text-slate-800">10:00 AM – 08:00 PM</span>
+                                
+                                <div>
+                                    <label for="form-area" class="block text-xs font-bold text-slate-500 uppercase mb-2">Village / Town / Area Name</label>
+                                    <input id="form-area" type="text" required placeholder="eg. Dumari Khurd, Chauri Chaura" class="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-500/20 outline-none font-medium transition-all text-slate-800 min-h-[44px]">
                                 </div>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-slate-200/50">
-                                <p class="text-xs text-slate-400 italic mb-3">* Hours might differ during public holidays</p>
-                                <span class="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-teal-100/30">
-                                    <i data-lucide="flag" class="w-3.5 h-3.5"></i> National Unity Day Observance
-                                </span>
+                                
+                                <div>
+                                    <label for="form-service" class="block text-xs font-bold text-slate-500 uppercase mb-2">Select Primary Dental Treatment</label>
+                                    <select id="form-service" required class="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-500/20 outline-none font-medium text-slate-600 transition-all min-h-[44px]">
+                                        <option value="" disabled selected>Choose a clinical treatment...</option>
+                                        <option value="Root Canal Treatment (RCT)">Root Canal Treatment (RCT)</option>
+                                        <option value="Painless Tooth Extraction">Painless Tooth Extraction</option>
+                                        <option value="Modern Dental Implant">Modern Dental Implant</option>
+                                        <option value="Dental Scaling / Cleaning">Dental Scaling / Cleaning</option>
+                                        <option value="Cosmetic Bleaching / Whitening">Cosmetic Bleaching / Whitening</option>
+                                        <option value="Children Dentistry">Children Dentistry</option>
+                                        <option value="Complete / Partial Denture">Complete / Partial Denture</option>
+                                        <option value="Digital X-Ray Assessment">Digital X-Ray Assessment</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="form-message" class="block text-xs font-bold text-slate-500 uppercase mb-2">Additional Notes / History (Optional)</label>
+                                    <textarea id="form-message" placeholder="Please mention existing medical issues or timeline preference..." rows="4" class="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-500/20 outline-none font-medium transition-all text-slate-800"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-teal-600 text-white py-4 rounded-xl font-bold hover:bg-teal-700 active:scale-[0.99] shadow-xl shadow-teal-500/10 transition-all text-base min-h-[48px] flex items-center justify-center gap-2">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                                    <span>Confirm Doctor Appointment</span>
+                                </button>
+                            </form>
+                            
+                            <!-- Success Dialog Overlay (Touch accessibility compliant) -->
+                            <div id="booking-success" class="absolute inset-0 bg-white/95 backdrop-blur-md rounded-[2rem] flex flex-col items-center justify-center text-center p-6 sm:p-10 opacity-0 pointer-events-none transition-all duration-300 z-30">
+                                <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mb-4 shadow-inner">
+                                    <i data-lucide="check" class="w-8 h-8"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold text-slate-900 mb-2">Booking Sheet Generated!</h4>
+                                <p class="text-slate-500 text-sm max-w-sm mb-6 leading-relaxed font-medium">
+                                    Dear <strong id="success-name">Patient</strong>, we have prepared your structured booking sheet. Click the button below to send it instantly via WhatsApp and reserve your slot.
+                                </p>
+                                <div class="flex flex-col gap-3 w-full max-w-xs">
+                                    <button id="send-whatsapp-btn" class="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl font-bold transition-all shadow-lg flex items-center justify-center gap-2 min-h-[44px]">
+                                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                        <span>Send Slip on WhatsApp</span>
+                                    </button>
+                                    <button onclick="closeSuccessDialog()" class="w-full py-2.5 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold hover:bg-slate-200 active:scale-95 transition-all min-h-[44px]">
+                                        Close and Clear
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Right Side: Booking Form -->
-                    <div class="reveal bg-white border border-slate-100 p-8 sm:p-10 lg:p-12 rounded-[2.5rem] sm:rounded-[3.5rem] shadow-2xl shadow-slate-100">
-                        <h3 class="text-2xl font-bold mb-8 font-serif text-slate-900">Instant Booking</h3>
-                        <form id="contactForm" class="space-y-5">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <input type="text" required placeholder="Name" class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-teal-500 outline-none font-medium">
-                                <input type="tel" required placeholder="Phone" class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-teal-500 outline-none font-medium">
-                            </div>
-                            <!-- Village/Town Input Field -->
-                            <input type="text" required placeholder="Village / Town Name" class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-teal-500 outline-none font-medium">
-                            
-                            <select class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-teal-500 outline-none font-medium text-slate-500">
-                                <option>Select Service</option>
-                                <option>RCT</option>
-                                <option>Extractions</option>
-                                <option>Implants</option>
-                                <option>Cleaning</option>
-                                <option>Children Dentistry</option>
-                            </select>
-                            <textarea placeholder="Message..." rows="4" class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-teal-500 outline-none font-medium"></textarea>
-                            <button type="submit" class="w-full bg-teal-600 text-white py-5 rounded-2xl font-bold hover:bg-teal-700 shadow-xl shadow-teal-100 transition-all text-lg">Confirm Appointment</button>
-                        </form>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-16 pb-28 md:pt-24 md:pb-12">
+    <!-- Brand Footing Interface -->
+    <footer class="bg-slate-900 text-white pt-16 pb-28 md:pt-24 md:pb-12 reveal reveal-up">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-                <!-- Brand & Links -->
+                
+                <!-- Brand Description & Quick Sitemap -->
                 <div class="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left">
                     <div class="flex items-center gap-4">
                         <div class="bg-teal-600 p-3 rounded-xl shadow-lg shadow-teal-950/40">
@@ -653,79 +935,192 @@
                         </div>
                         <h4 class="font-bold text-2xl uppercase tracking-tighter">Pratap Dental</h4>
                     </div>
-                    <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
-                        Centred on exceptional quality dental treatments. Your comfort and bright smile remain our absolute primary mission.
+                    <p class="text-slate-400 text-sm max-w-sm leading-relaxed font-medium">
+                        Centred on exceptional quality dental treatments. Your comfort, health, and bright smile remain our absolute primary mission.
                     </p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-8 text-slate-400 text-xs font-bold uppercase tracking-widest">
-                        <button onclick="navigateTo('home')" class="hover:text-teal-400 transition-colors">About Us</button>
-                        <button onclick="navigateTo('services')" class="hover:text-teal-400 transition-colors">Services</button>
-                        <button onclick="navigateTo('contact')" class="hover:text-teal-400 transition-colors">Contact</button>
+                        <button onclick="navigateTo('home')" class="hover:text-teal-400 transition-colors min-h-[44px]">About Clinic</button>
+                        <button onclick="navigateTo('services')" class="hover:text-teal-400 transition-colors min-h-[44px]">Services Directory</button>
+                        <button onclick="navigateTo('contact')" class="hover:text-teal-400 transition-colors min-h-[44px]">Reach Us</button>
                     </div>
                 </div>
-                <!-- Google Maps Embed -->
-                <div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-950">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.0055676836237!2d83.5686670745633!3d26.648304176805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399161f36996e703%3A0xf109dc5ada50e8b4!2sPRATAP%20DENTAL%20CLINIC!5e0!3m2!1sen!2sin!4v1779128212283!5m2!1sen!2sin" class="w-full h-64 md:h-72 border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <!-- Embedded Google Maps Layout (CLS Optimized) -->
+                <div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-950 aspect-video lg:aspect-[16/10]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.0055676836237!2d83.5686670745633!3d26.648304176805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399161f36996e703%3A0xf109dc5ada50e8b4!2sPRATAP%20DENTAL%20CLINIC!5e0!3m2!1sen!2sin!4v1779128212283!5m2!1sen!2sin" 
+                            class="w-full h-full border-0" 
+                            allowfullscreen="" 
+                            title="Interactive map location showing Pratap Dental Clinic in Chauri Chaura"
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
             </div>
+            
             <div class="border-t border-slate-800/50 pt-8 text-center text-slate-500 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest">
-                &copy; <span id="year"></span> Pratap Dental Clinic &middot; Gorakhpur, Uttar Pradesh
+                &copy; <span id="year"></span> Pratap Dental Clinic &middot; Gorakhpur, Uttar Pradesh &middot; All Rights Reserved
             </div>
         </div>
     </footer>
 
+    <!-- Custom SPA JavaScript Transition Logic & Interactivity scripts -->
     <script>
-        // Smooth view transition router logic 
+        /**
+         * Smooth cross-fade page transit routing control
+         * Handles scroll states, layouts, active item classes, and hardware accelerated page switches
+         */
         function navigateTo(pageId) {
-            const pages = document.querySelectorAll('.page');
-            const navItems = document.querySelectorAll('.nav-item');
-            
-            pages.forEach(page => page.classList.remove('active'));
-            
+            const currentActivePage = document.querySelector('.page.active');
             const targetPage = document.getElementById(pageId + '-page');
-            if(targetPage) {
+            
+            if (!targetPage || currentActivePage === targetPage) return;
+
+            // Fade and translate out existing active page
+            if (currentActivePage) {
+                currentActivePage.style.transform = "translate3d(0, -12px, 0) scale(0.98)";
+                currentActivePage.style.opacity = "0";
+                
+                setTimeout(() => {
+                    currentActivePage.classList.remove('active');
+                    
+                    // Trigger entry transit for incoming page
+                    targetPage.classList.add('active');
+                    targetPage.style.transform = "translate3d(0, 16px, 0) scale(0.98)";
+                    targetPage.style.opacity = "0";
+                    
+                    // Force DOM reflow execution
+                    targetPage.offsetHeight;
+                    
+                    targetPage.style.transform = "translate3d(0, 0, 0) scale(1)";
+                    targetPage.style.opacity = "1";
+                    
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    
+                    // Refresh and start intersection trigger tasks
+                    setTimeout(refreshAnimations, 50);
+                }, 300);
+            } else {
                 targetPage.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                // Delays reveal trigger slightly to allow rendering flow to lock in
-                setTimeout(refreshAnimations, 50);
+                targetPage.style.transform = "translate3d(0, 0, 0) scale(1)";
+                targetPage.style.opacity = "1";
             }
 
+            // Sync Bottom liquid nav bar items
+            const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
                 item.classList.remove('active');
-                if(item.getAttribute('data-page') === pageId) {
+                if (item.getAttribute('data-page') === pageId) {
                     item.classList.add('active');
                 }
             });
         }
 
-        // Custom intersection observer for reveal entries
+        /**
+         * Custom intersection observer to handle in & out scrolling animations
+         * Toggles the '.visible' class based on entry and exit states
+         */
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    // Smooth exit animation on scroll out
+                    entry.target.classList.remove('visible');
+                }
             });
-        }, { threshold: 0.03 });
-
-        function refreshAnimations() {
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-        }
-
-        // Window load and instantiation tasks
-        window.addEventListener('load', () => {
-            lucide.createIcons();
-            document.getElementById('year').textContent = new Date().getFullYear();
-            refreshAnimations();
+        }, { 
+            threshold: 0.05,
+            rootMargin: "-20px 0px -20px 0px"
         });
 
-        // Booking form action listener 
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
+        function refreshAnimations() {
+            // Disconnect old elements to avoid duplicates before rebinding
+            revealObserver.disconnect();
+            
+            document.querySelectorAll('.reveal').forEach(el => {
+                revealObserver.observe(el);
+            });
+        }
+
+        // Global Variables for Form Processing
+        const form = document.getElementById('contactForm');
+        const successOverlay = document.getElementById('booking-success');
+        const successName = document.getElementById('success-name');
+        const sendWhatsappBtn = document.getElementById('send-whatsapp-btn');
+        let whatsappURL = '';
+
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = e.target.querySelector('button');
-            btn.innerText = "Booking Confirmed!";
-            btn.classList.replace('bg-teal-600', 'bg-emerald-500');
+            
+            // Get user variables from input fields dynamically
+            const inputName = document.getElementById('form-name').value.trim();
+            const inputPhone = document.getElementById('form-phone').value.trim();
+            const inputArea = document.getElementById('form-area').value.trim();
+            const selectService = document.getElementById('form-service').value;
+            const inputMessage = document.getElementById('form-message').value.trim() || 'No additional history provided.';
+
+            // Get current timestamp
+            const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const formattedDate = new Date().toLocaleDateString('en-IN', options);
+
+            // Constructing a beautifully structured "Data Sheet" text format for WhatsApp
+            const sheetText = `📋 *PRATAP DENTAL CLINIC - BOOKING SHEET*\n` +
+                              `====================================\n\n` +
+                              `👤 *PATIENT DETAILS*\n` +
+                              `• Patient Name  : ${inputName}\n` +
+                              `• Phone No.     : ${inputPhone}\n` +
+                              `• Location/Area : ${inputArea}\n\n` +
+                              `🩺 *CLINICAL REGISTRATION*\n` +
+                              `• Service       : ${selectService}\n` +
+                              `• Note/History  : "${inputMessage}"\n\n` +
+                              `====================================\n` +
+                              `📅 Submitted on : ${formattedDate}\n` +
+                              `🏥 _Please confirm my clinic appointment slot._`;
+
+            // Encoding constructed ASCII data-sheet 
+            const encodedText = encodeURIComponent(sheetText);
+            
+            // Doctor WhatsApp hotline number
+            const doctorNumber = "918005427818";
+            whatsappURL = `https://api.whatsapp.com/send?phone=${doctorNumber}&text=${encodedText}`;
+
+            // Fill validation text into success dialog overlay
+            successName.textContent = inputName;
+
+            // Display overlay dialog box
+            successOverlay.classList.remove('pointer-events-none', 'opacity-0');
+            successOverlay.classList.add('opacity-100', 'pointer-events-auto');
+
+            // Automatically open WhatsApp in a new tab after 1.5 seconds
             setTimeout(() => {
-                btn.innerText = "Confirm Appointment";
-                btn.classList.replace('bg-emerald-500', 'bg-teal-600');
-                e.target.reset();
-            }, 3000);
+                window.open(whatsappURL, '_blank');
+            }, 1500);
+        });
+
+        // Manual dispatch button trigger
+        sendWhatsappBtn.addEventListener('click', () => {
+            if (whatsappURL) {
+                window.open(whatsappURL, '_blank');
+            }
+        });
+
+        function closeSuccessDialog() {
+            successOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+            successOverlay.classList.add('pointer-events-none', 'opacity-0');
+            form.reset();
+            whatsappURL = '';
+        }
+
+        // Global Initialization Window Handler
+        window.addEventListener('load', () => {
+            // Setup Lucide custom vector icons
+            lucide.createIcons();
+            
+            // Synchronize static year values
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Trigger first paint scroll elements
+            refreshAnimations();
         });
     </script>
 </body>
